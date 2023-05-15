@@ -1,0 +1,607 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Nhà Hàng GTX (Món ăn chính)</title>
+</head>
+<body>
+	<div class="header">
+	<div class="logo">
+		<div class="hinh">
+		<img src="img/cutlery.png" alt="logo">
+		</div>
+		<div class="Ten">
+		<p><h1>GTX RESTAURANT</h1>Eatery and Wine</p>
+		</div>
+		</div>
+	<div class="menu">
+		<ul>
+			<li><a href="index.html"><img src="img/home.png" alt="home">Trang Chủ</a></li>	
+			<li class="foodMenu"><a href="#" style="color: red"><img src="img/restaurant.png" alt="food">Món ăn<i class="fa-solid fa-chevron-down"></i></a>
+			<ul class="food2Menu">
+				<li class="food2Menu1"><i class="fa-solid fa-carrot"></i><a href="#">Khai vị</a>
+					<ul class="food3Menu">
+						<li><i class="fa-solid fa-mug-hot"></i><a href="soup.html">Súp</a></li>
+						<li><i class="fa-solid fa-bread-slice"></i><a href="bread.html">Bánh Mì</a></li>
+						<li><i class="fa-solid fa-plate-wheat"></i><a href="vegetable.html">Rau</a></li>
+					</ul>
+				</li>
+				<li class="food2Menu2"><i class="fa-solid fa-bowl-food"></i><a href="#" style="color: red">Món chính</a>
+				<ul class="food3Menu1">
+						<li><i class="fa-solid fa-earth-americas"></i><a href="freshFood.html" style="color: red">Nước Ngoài</a></li>
+						<li><i class="fa-solid fa-earth-asia"></i><a href="#">Việt Nam</a></li>
+					</ul>
+				</li>
+				<li><i class="fa-solid fa-cookie-bite"></i><a href="#">Tráng miệng</a></li>
+				<li><i class="fa-solid fa-wine-glass"></i><a href="#">Nước uống</a></li>
+			</ul>
+			</li>
+			<li><a href="table.html"><img src="./img/edit-table.png" alt="table">Đặt bàn</a></li>
+			<li><a href="location.html"><img src="img/location.png" alt="location">Vị Trí</a></li>
+			<li><a href="chef.html"><img src="img/chef.png" alt="chef">Đầu bếp</a></li>	
+			<li><a href="more.html"><img src="img/information.png" alt="more">Thông tin</a></li>
+		</ul>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="slide">
+		<div class="item">
+		<div class="hinhAnh">
+		<img src="img/Thiết kế chưa có tên (6).png" alt="Banner Image">	
+		</div>	
+		</div>
+			<div class="item">
+		<div class="hinhAnh">
+  		<img src="img/Thiết kế chưa có tên (7).png" alt="Banner Image">
+		</div>	
+		</div>
+			<div class="item">
+		<div class="hinhAnh">
+ 		 <img src="img/Thiết kế chưa có tên (8).png" alt="Banner Image">
+		</div>
+		</div>
+			<div class="item">
+		<div class="hinhAnh">
+		  <img src="img/Thiết kế chưa có tên (9).png" alt="Banner Image">
+		</div>
+		</div>
+		</div>
+		<div class="btn">
+			<button id ="prev"><i class="fa-solid fa-angles-left"></i></button>
+			<button id ="next"><i class="fa-solid fa-angles-right"></i></button>
+			</div>
+			<ul class = "dots">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+</div>
+	<script>
+		let slider = document.querySelector(".slide");
+		let item = document.querySelectorAll(".item");
+		let dots = document.querySelectorAll(".dots li");
+		let prev = document.getElementById("prev");
+		let next = document.getElementById("next");
+		let maxSlide = item.length - 1;
+		let active = 0;
+		next.onclick = function()
+		{
+			if(active + 1 > maxSlide)
+				{
+					active = 0;
+				}
+			else
+				{
+					active = active + 1;
+				}
+			reloadLayer();
+		}
+		prev.onclick = function()
+		{
+			if(active -1 < 0)
+				{
+					active = item.length - 1;
+				}
+			else
+				{
+					active = active - 1;
+				}
+			reloadLayer();
+		}
+		let reload = setInterval(() =>{
+			next.click()
+		},3000);
+		function reloadLayer()
+		{
+			slider.style.left = -item[active].offsetLeft + "px";
+			let dotsLastest = document.querySelector(".dots li.active");
+			dotsLastest.classList.remove("active");
+			dots[active].classList.add("active");
+			clearInterval(reload);
+			reload = setInterval(() =>{
+			next.click()
+		},3000);
+		}
+		for(let i = 0; i<dots.length;i++)
+			{
+				dots[i].addEventListener("click",()=>
+										{
+					active = i;
+					reloadLayer();
+
+				})
+			}
+	</script>
+	<!--<script>
+		const bannerImg = document.querySelectorAll(".banner img");
+		let index = 0;
+		setInterval(function(){
+					bannerImg[index].classList.remove("active");
+			index = (index + 1)%bannerImg.length;
+			bannerImg[index].classList.add("active");
+					}, 5000);
+	</script>-->
+	<div class="welcome">
+	<h2>GTX RESTAURANT</h2>
+		<img src="img/cutlery.png" alt="">
+	<h1>MÓN ĂN CHÍNH (Other Countries)</h1>
+	</div>
+	<div class="listSecondFood">
+	<div class="itemSecondFood">
+		<div class="titleSelectCountry">
+		Lựa chọn món ăn từ các quốc gia khác nhau:
+		</div>
+	<select id="luaChonQuocGia" onChange="thayDoi()">
+		<option value="France" selected>Pháp</option>
+		<option value="Italy">Ý</option>	
+		<option value="Japan">Nhật Bản</option>	
+		<option value="Korea">Hàn Quốc</option>
+	</select>
+		<div class="foodCountry">
+		<div class="foodKorean" style="display: none;">
+		<div class="imgItalyFood">
+		<img src="food/Chinh/nuocNgoai/HanQuoc/bulgogi1-1659544883.jpg" alt="france">	
+		</div>
+		<div class="textKoreanFood">
+		<div class="titleKoreanFood">
+			Bulgogi
+		</div>
+		<div class="desKoreanFood">
+			Bulgogi là một món thịt nướng nổi tiếng của Hàn Quốc. Nó bao gồm thịt bò mềm, thái mỏng được ướp với một hỗn hợp gia vị bao gồm tỏi, hành, đường, nước tương và dầu mè. Thịt sau đó được nướng trên lửa than hoặc lửa than hoá.
+		</div>
+		<a href="#" class ="moreDesKoreanFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodKorean" style="display: none;">
+		<div class="imgKoreanFood">
+		<img src="food/Chinh/nuocNgoai/HanQuoc/classic-korean-bibimbap-recipe-2118765-hero-01-091c0e0f8c20426d8f70747955efa61d.jpg" alt="france">	
+		</div>
+		<div class="textKoreanFood">
+		<div class="titleKoreanFood">
+			Bibimbap
+		</div>
+		<div class="desKoreanFood">
+			Bibimbap là một món ăn truyền thống Hàn Quốc có nghĩa là "cơm trộn". Nó bao gồm một tô cơm trắng được trộn chung với các loại rau, thịt, trứng và nước mắm đặc biệt. Bibimbap thường được trang trí đẹp mắt và có hương vị đa dạng, từ cay đến ngọt.
+		</div>
+		<a href="#" class ="moreDesKoreanFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodKorean" style="display: none;">
+		<div class="imgKoreanFood">
+		<img src="food/Chinh/nuocNgoai/HanQuoc/gimpapnè-1200x676.jpg" alt="france">	
+		</div>
+		<div class="textKoreanFood">
+		<div class="titleKoreanFood">
+			Kimbap
+		</div>
+		<div class="desItalyFood">
+			Kimbap là một món ăn giống như sushi cuốn từ cơm và các thành phần khác như thịt, rau, trứng, cá, củ quả và một chút mù tạt. Các thành phần được cuốn trong một lớp rong biển. Kimbap thường được cắt thành các lát tròn và là một món ăn nhẹ, dễ ăn.
+		</div>
+		<a href="#" class ="moreDesKoreanFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodKorean" style="display: none;">
+		<div class="imgKoreanFood">
+		<img src="food/Chinh/nuocNgoai/HanQuoc/kim-chi-cai-thao-chua-vi-han-quoc.jpg" alt="france">	
+		</div>
+		<div class="textKoreanFood">
+		<div class="titleKoreanFood">
+			Kimchi
+		</div>
+		<div class="desKoreanFood">
+			Kimchi là một món ăn truyền thống và biểu tượng của Hàn Quốc. Đó là một loại rau củ muối lên men, chủ yếu là cải thảo, được ướp trong gia vị và các thành phần khác như tỏi, ớt, gừng và tôm khô. Kimchi có nhiều hương vị, từ chua, cay đến ngọt, và thường được ăn kèm với cơm và món khác.
+		</div>
+		<a href="#" class ="moreDesKoreanFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodJapan" style="display: none;">
+		<div class="imgJapanFood">
+		<img src="food/Chinh/nuocNgoai/NhatBan/1200-1200x676-49.jpg" alt="france">	
+		</div>
+		<div class="textJapanFood">
+		<div class="titleJapanFood">
+			Ramen
+		</div>
+		<div class="desJapanFood">
+			Ramen là một món mì nổi tiếng của Nhật Bản. Nó bao gồm mì sợi dày, nấu chín trong nước dùng có hương vị đậm đà, thường được làm từ xương heo, thịt gà hoặc hải sản. Ramen thường được kèm theo các loại topping như thịt heo nạc, măng tây, trứng luộc và rong biển.
+		</div>
+		<a href="#" class ="moreDesJapanFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodJapan" style="display: none;">
+		<div class="imgJapanFood">
+		<img src="food/Chinh/nuocNgoai/NhatBan/lau-sukiyaki-la-gi-tim-hieu-cach-nau-lau-sukiyaki-nhat-ban-202201031105547812.jpg" alt="france">	
+		</div>
+		<div class="textJapanFood">
+		<div class="titleJapanFood">
+			Sukiyaki
+		</div>
+		<div class="desJapanFood">
+			Sukiyaki là một món lẩu nổi tiếng của Nhật Bản. Nó bao gồm thịt bò mỏng, nấu chín trong nước dùng có hương vị ngọt ngào, kèm theo các loại rau quả, nấm và tofu. Sukiyaki thường được ăn kèm với một chén trứng sốt để chấm.
+		</div>
+		<a href="#" class ="moreDesJapanFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodJapan" style="display: none;">
+		<div class="imgJapanFood">
+		<img src="food/Chinh/nuocNgoai/NhatBan/Sushi-la-gi-co-tot-khong-nhung-loai-sushi-tot-va-khong-tot-cho-suc-khoe-1-1200x676.jpg" alt="france">	
+		</div>
+		<div class="textJapanFood">
+		<div class="titleJapanFood">
+			Sushi
+		</div>
+		<div class="desJapanFood">
+			Sushi là một món ăn truyền thống của Nhật Bản. Nó bao gồm một miếng cơm trắng được phủ lên trên là một lát cá tươi hoặc các loại hải sản khác như tôm, cá hồi, ốc, hoặc trứng cá. Sushi thường được phục vụ cùng với nước tương, gừng đỏ và wasabi.
+		</div>
+		<a href="#" class ="moreDesJapanFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodJapan" style="display: none;">
+		<div class="imgJapanFood">
+		<img src="food/Chinh/nuocNgoai/NhatBan/thumbcn-1200x676-8.jpg" alt="france">	
+		</div>
+		<div class="textJapanFood">
+		<div class="titleJapanFood">
+			Tempura
+		</div>
+		<div class="desJapanFood">
+			Tempura là một món ăn chiên giòn có nguồn gốc từ Bồ Đào Nha nhưng đã trở thành một phần không thể thiếu trong ẩm thực Nhật Bản. Nó bao gồm các loại hải sản, rau quả hoặc thịt được chế biến bằng cách ngâm qua chất bột chiên và rán trong dầu nóng cho đến khi vàng giòn.
+		</div>
+		<a href="#" class ="moreDesJapanFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodItaly" style="display: none;">
+		<div class="imgItalyFood">
+		<img src="food/Chinh/nuocNgoai/Y/2-cach-lam-mon-risotto-thom-ngon-tu-nuoc-y-202107311122090794.jpg" alt="france">	
+		</div>
+		<div class="textItalyFood">
+		<div class="titleItalyFood">
+			Risotto
+		</div>
+		<div class="desItalyFood">
+			Risotto là một món ăn có nguồn gốc từ miền Bắc nước Ý. Nó được làm từ gạo Arborio hoặc Carnaroli, hấp chín với nước, rượu trắng và thêm gia vị như hành tây, nấm và phô mai.
+		</div>
+		<a href="#" class ="moreDesItalyFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodItaly" style="display: none;">
+		<div class="imgItalyFood">
+		<img src="food/Chinh/nuocNgoai/Y/1615916524567.jpeg" alt="france">	
+		</div>
+		<div class="textItalyFood">
+		<div class="titleItalyFood">
+			Pasta
+		</div>
+		<div class="desItalyFood">
+			Được làm từ bột mì và nước, pasta là một loại mì ống hoặc mì sợi. Nó thường được kết hợp với các loại sốt như bolognese, carbonara, pesto và arrabbiata.
+		</div>
+		<a href="#" class ="moreDesItalyFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodItaly" style="display: none;">
+		<div class="imgItalyFood">
+		<img src="food/Chinh/nuocNgoai/Y/authentic-gelato-recipe-4172134-hero-01-949187e818a94301a15561d7140dbe33.jpg" alt="france">	
+		</div>
+		<div class="textItalyFood">
+		<div class="titleItalyFood">
+			Gelato
+		</div>
+		<div class="desItalyFood">
+			Gelato là một loại kem Ý truyền thống. Nó có cấu trúc mịn và độ ngọt hơn so với kem thông thường. Gelato thường có nhiều hương vị đa dạng như socola, vani, dâu tây và hạnh nhân.
+		</div>
+		<a href="#" class ="moreDesItalyFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodItaly" style="display: none;">
+		<div class="imgItalyFood">
+		<img src="food/Chinh/nuocNgoai/Y/banh-tiramisu.jpg" alt="france">	
+		</div>
+		<div class="textItalyFood">
+		<div class="titleItalyFood">
+			Tiramisu
+		</div>
+		<div class="desItalyFood">
+			Tiramisu là một món tráng miệng phổ biến của Ý. Nó được làm từ bánh Savoiardi (bánh quy ladyfinger) ngâm trong cà phê, lớp kem phô mai mascarpone và được rắc bột cacao lên trên.
+		</div>
+		<a href="#" class ="moreDesItalyFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodItaly" style="display: none;">
+		<div class="imgItalyFood">
+		<img src="food/Chinh/nuocNgoai/Y/lasagna-truyen-thong-600x400.jpg" alt="france">	
+		</div>
+		<div class="textItalyFood">
+		<div class="titleItalyFood">
+			Lasagna
+		</div>
+		<div class="desItalyFood">
+			 Món lasagna là một loại mì ống dày được xếp lớp với sốt bò, sốt cà chua, phô mai và các loại rau khác. Nó được nướng trong lò cho đến khi phô mai tan chảy và bề mặt hấp dẫn màu nâu.
+		</div>
+		<a href="#" class ="moreDesItalyFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodItaly" style="display: none;">
+		<div class="imgItalyFood">
+		<img src="food/Chinh/nuocNgoai/Y/tong-hop-4-cach-lam-pizza-tai-nha-ma-khong-can-lo-nuong-202112111511138589.jpg" alt="france">	
+		</div>
+		<div class="textItalyFood">
+		<div class="titleItalyFood">
+			Pizza
+		</div>
+		<div class="desItalyFood">
+			Món pizza là một biểu tượng của ẩm thực Ý. Nó có nền bánh mỏng được phủ đầy các loại topping như sốt cà chua, phô mai, xúc xích, thịt và rau.
+		</div>
+		<a href="#" class ="moreDesItalyFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodFrance" style="display: block;">
+		<div class="imgFranceFood">
+		<img src="food/Chinh/nuocNgoai/Phap/bat-mi-cach-lam-banh-mi-baguette-phap-gion-xop-dac-ruot-202204041137450765.jpg" alt="france">	
+		</div>
+		<div class="textFranceFood">
+			<div class="titleFranceFood">
+			Bánh mì Baguette
+			</div>
+			<div class="desFranceFood">
+			Bánh mì Baguette là biểu tượng của ẩm thực Pháp. Nó có vỏ giòn tan và ruột mềm, thường được sử dụng trong các bánh sandwich (bánh mì kẹp) hoặc dùng để chấm với nhiều loại món.
+			</div>
+			<a href="#" class ="moreDesFranceFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodFrance" style="display: block;">
+		<div class="imgFranceFood">
+		<img src="food/Chinh/nuocNgoai/Phap/52096452-f9c1-49e9-9e76-46c694bee2ba--2020-1124_steak-frites_3x2_rocky-luten_032.jpg" alt="france">	
+		</div>
+		<div class="textFranceFood">
+			<div class="titleFranceFood">
+			Steak Frites
+			</div>
+			<div class="desFranceFood">
+			 Steak Frites là một món ăn đơn giản và ngon miệng của Pháp. Món này bao gồm một miếng thịt bò nướng chín tới mức mong muốn, thường là thịt bò lươn đơn hoặc thịt bò tươi sống, kèm theo khoai tây chiên giòn. Nó thường được ăn kèm với nước sốt và rau sống.
+			</div>
+			<a href="#" class ="moreDesFranceFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodFrance" style="display: block;">
+		<div class="imgFranceFood">
+		<img src="food/Chinh/nuocNgoai/Phap/Creme-Brulee_8-SQ-1.jpg" alt="france">	
+		</div>
+		<div class="textFranceFood">
+			<div class="titleFranceFood">
+			Crème Brûlée
+			</div>
+			<div class="desFranceFood">
+			Crème Brûlée là một món tráng miệng phổ biến trong ẩm thực Pháp. Đây là một loại kem trứng mềm và mịn, thường có hương vị vani, được phủ một lớp đường caramel ở trên cùng. Khi thưởng thức, lớp đường caramel sẽ được phá vỡ để tiếp cận đến kem bên trong.
+			</div>
+			<a href="#" class ="moreDesFranceFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodFrance" style="display: block;">
+		<div class="imgFranceFood">
+		<img src="food/Chinh/nuocNgoai/Phap/Salad-nicoise-720x720.jpg" alt="france">	
+		</div>
+		<div class="textFranceFood">
+			<div class="titleFranceFood">
+			Salade Niçoise
+			</div>
+			<div class="desFranceFood">
+			Salade Niçoise là một món salad truyền thống từ vùng Nice của Pháp. Món này gồm rau sống, cà chua, cà tím, quả trứng, cá ngừ, cây hành tây, dầu ô liu và các loại gia vị. Salade Niçoise thường được phục vụ với cá ngừ chiên và khoai tây.
+			</div>
+			<a href="#" class ="moreDesFranceFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodFrance" style="display: block;">
+		<div class="imgFranceFood">
+		<img src="food/Chinh/nuocNgoai/Phap/coq-au-vin-3740fe3.jpg" alt="france">	
+		</div>
+		<div class="textFranceFood">
+			<div class="titleFranceFood">
+			Coq au Vin
+			</div>
+			<div class="desFranceFood">
+			Coq au Vin là một món gà hầm được nấu với rượu đỏ và rất nhiều gia vị. Món này có nguồn gốc từ nông trại và trở thành một món ăn cổ điển của Pháp. Gà được hầm chín mềm trong nước sốt đậm đà, thường được kèm với khoai tây nghiền hoặc bánh mì.
+			</div>
+			<a href="#" class ="moreDesFranceFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodFrance" style="display: block;">
+		<div class="imgFranceFood">
+		<img src="food/Chinh/nuocNgoai/Phap/tarte-tatin-apple-1200.jpg" alt="france">	
+		</div>
+		<div class="textFranceFood">
+			<div class="titleFranceFood">
+			Tarte Tatin
+			</div>
+			<div class="desFranceFood">
+			Tarte Tatin là một loại bánh nướng có nguồn gốc từ vùng Sologne của Pháp. Bánh được làm bằng cách nướng trái cây, thường là táo, trong một lớp đường caramel dưới đáy bánh. Khi nướng, bánh được đảo ngược để tạo ra một mặt trên caramelized ngon lành.
+			</div>
+			<a href="#" class ="moreDesFranceFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodFrance" style="display: block;">
+		<div class="imgFranceFood">
+			<img src="food/Chinh/nuocNgoai/Phap/download.jpg" alt="france">
+		</div>
+		<div class="textFranceFood">
+			<div class="titleFranceFood">
+			Escargot
+			</div>
+			<div class="desFranceFood">
+			 Escargot là từ tiếng Pháp để chỉ ốc sên. Món ăn này thường được chế biến bằng cách nướng ốc sên trong vỏ kèm theo gia vị như bơ tỏi, hẹ, hoặc phô mai. Escargot có hương vị đặc biệt và là một món ăn pháp truyền thống được yêu thích trong các bữa tiệc hoặc nhà hàng sang trọng.
+			</div>
+			<a href="#" class ="moreDesFranceFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodFrance" style="display: block;">
+		<div class="imgFranceFood">
+			<img src="food/Chinh/nuocNgoai/Phap/17515-quiche-lorraine-i-3x4-1.jpg" alt="france">
+		</div>
+		<div class="textFranceFood">
+			<div class="titleFranceFood">
+			Quiche Lorraine
+			</div>
+			<div class="desFranceFood">
+			 Quiche Lorraine là một món ăn nổi tiếng từ vùng Lorraine của Pháp. Đây là một loại bánh quiche có nhân từ trứng, kem, thịt xông khói và phô mai. Quiche Lorraine có vỏ bánh giòn và nhân mềm ngọt, là một món ăn phổ biến trong bữa sáng hoặc bữa trưa.
+			</div>
+			<a href="#" class ="moreDesFranceFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		<div class="foodFrance" style="display: block;">
+		<div class="imgFranceFood">
+			<img src="food/Chinh/nuocNgoai/Phap/cach-lam-banh-sung-bo-banh-croissant-ngan-lop-thom-ngon-noi-tieng-cua-phap-202201171412571855.jpg" alt="france">
+		</div>
+		<div class="textFranceFood">
+			<div class="titleFranceFood">
+			Croissant
+			</div>
+			<div class="desFranceFood">
+			Croissant là một loại bánh ngọt có hình dạng cong như vòng cung mặt trăng. Bánh được làm từ lớp bột mỡ xốp nhẹ, có vị ngọt và hương thơm đặc trưng. Croissant thường được thưởng thức vào bữa sáng, và là một biểu tượng không thể thiếu trong ẩm thực Pháp.
+			</div>
+			<a href="#" class ="moreDesFranceFood"><button>Xem chi tiết</button></a>
+		</div>
+		</div>
+		</div>
+	</div>
+	</div>
+	<script>
+	function thayDoi()
+		{
+			var quocGia = document.getElementById("luaChonQuocGia").value;
+			if(quocGia === "France")
+				{
+					document.querySelectorAll(".foodFrance").forEach(function(element) { element.style.display = "block"; });
+					document.querySelectorAll(".foodItaly").forEach(function(element) { element.style.display = "none"; });
+					document.querySelectorAll(".foodKorean").forEach(function(element) { element.style.display = "none"; });
+					document.querySelectorAll(".foodJapan").forEach(function(element) { element.style.display = "none"; });
+				}
+			else if (quocGia === "Italy")
+				{
+					document.querySelectorAll(".foodFrance").forEach(function(element) { element.style.display = "none"; });
+					document.querySelectorAll(".foodItaly").forEach(function(element) { element.style.display = "block"; });
+					document.querySelectorAll(".foodKorean").forEach(function(element) { element.style.display = "none"; });
+					document.querySelectorAll(".foodJapan").forEach(function(element) { element.style.display = "none"; });
+				}
+			else if (quocGia ==="Korea")
+				{
+					document.querySelectorAll(".foodFrance").forEach(function(element) { element.style.display = "none"; });
+					document.querySelectorAll(".foodItaly").forEach(function(element) { element.style.display = "none"; });
+					document.querySelectorAll(".foodKorean").forEach(function(element) { element.style.display = "block"; });
+					document.querySelectorAll(".foodJapan").forEach(function(element) { element.style.display = "none"; });
+				}
+			else if(quocGia === "Japan")
+				{
+					document.querySelectorAll(".foodFrance").forEach(function(element) { element.style.display = "none"; });
+					document.querySelectorAll(".foodItaly").forEach(function(element) { element.style.display = "none"; });
+					document.querySelectorAll(".foodKorean").forEach(function(element) { element.style.display = "none"; });
+					document.querySelectorAll(".foodJapan").forEach(function(element) { element.style.display = "block"; });
+				}
+		}
+	</script>
+	<div class="countDown">
+	<div class="itemCount">
+	<div class="imgTime">
+	<img src="img/TOO_restaurant_Panoramique_vue_Paris_Seine_Tour_Eiffel_2.jpg" alt="img">	
+	</div>
+	<div class="time">
+		<div class="titleTime">
+		Thời gian khuyến mãi<br>Giảm 50% khi đặt bàn trực tuyến!
+		</div>
+		<div class="dayHour">
+		DAYS:
+		<div id="days">
+		05
+		</div>
+		HOURS:
+		<div id="hour">
+		12
+		</div>
+		MINUTES:
+		<div id="minute">
+		50
+		</div>
+		SECONDS:
+		<div id="second">
+		44
+		</div>
+		</div>
+		<div class="clickRec">
+		<div class="mess">
+		<i class="fa-solid fa-arrow-right-long"></i>Click để đặt bàn ngay!	
+		</div>
+		<button id = "dangKy">Đặt Bàn</button>
+		</div>
+		</div>
+
+	</div>
+	</div>
+	<script>
+    let endDate = new Date("06/30/2023 00:00:00").getTime();
+    let check = setInterval(function(){
+    let now = new Date().getTime();
+    let distance = endDate - now;
+    let day = Math.floor(distance / (24*60*60*1000));
+    let hour = Math.floor((distance % (24*60*60*1000)) / (60* 60*1000));
+    let minute = Math.floor((distance % (60* 60*1000)) / (60*1000));
+    let seconds = Math.floor((distance % (60*1000)) / 1000);
+	document.getElementById("days").innerText = day;
+	document.getElementById("hour").innerText = hour;
+	document.getElementById("minute").innerText = minute;
+	document.getElementById("second").innerText = seconds;
+    if(distance <= 0){
+        clearInterval(check);
+    }
+}, 1000);
+		</script>
+	<div class="footer">
+	<div class="leftFooter">
+		<ul>
+			<li><i class="fa-brands fa-facebook"></i>Facebook: GtxRes</li>
+			<li><i class="fa-brands fa-twitter"></i>Twitter: GtxT</li>
+			<li><i class="fa-brands fa-youtube"></i>Youtube: GtxChanel</li>
+			<li><i class="fa-solid fa-envelope"></i>Email: GtxResTian@gmail.com</li>
+			<li><i class="fa-solid fa-phone"></i>Phone: 0942316579</li>
+		</ul>
+	</div>
+	<div class="centerFooter">
+		<div class="tilteFooter">Sự hài lòng của bạn là niềm tự hào của chúng tôi</div>
+		<ul>
+			<li>Trần Hoàng Anh Khôi</li>
+			<li>Điền tên vào đây</li>
+			<li>Điền tên vào đây</li>
+		</ul>
+	</div>
+	<div class="rightFooter">
+		<ul>
+			<li>123 Main Street, Anytown, USA</li>
+			<li>456 Park Avenue, Cityville, USA</li>
+			<li>789 Elm Street, Villagetown, USA</li>
+			<li>321 Oak Avenue, Townsville, USA</li>
+			<li>987 Pine Road, Boroughville, USA</li>
+		</ul>
+	</div>
+	</div>
+</body>
+</html>

@@ -103,6 +103,8 @@ a
 {
 	margin-bottom: 30px;
 	position: absolute;
+	left: 0;
+	top: 50px;
 	width: 260px;
 	z-index: 999;
 	background: white;
@@ -110,7 +112,17 @@ a
 	opacity: 0;
 	transition: all .5s;
 }
-.foodMenu:hover > .food2Menu
+.foodMenu .fa-chevron-down
+{
+	margin-left: 5px;
+	font-size: 15px;
+	transition: all .5s;
+}
+.foodMenu:hover .fa-chevron-down
+{
+	transform: rotate(180deg);
+}
+.foodMenu:hover .food2Menu
 {
 	opacity: 1;
 }
@@ -130,7 +142,7 @@ a
 {	
 	top: -50px;
 	position: absolute;
-	left: 300px;
+	left: 280px;
 	width: 0;
 	background: white;
 	border-radius: 30px;
@@ -142,7 +154,7 @@ a
 {	
 	top: -60px;
 	position: absolute;
-	left: 300px;
+	left: 280px;
 	width: 0;
 	background: white;
 	border-radius: 30px;
@@ -849,4 +861,313 @@ a
 	font-weight: bold;
 	font-family: 'Dancing Script', cursive;
 	font-size: 40px;
+}
+.listFirstFood
+{
+	width: 70%;
+	margin: 100px auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.listFirstFood .itemListFirstFood
+{
+	width: 500px;
+	height: 200px;
+	margin-bottom: 100px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+	padding: 3%;
+	border-radius: 30px;
+	position: relative;
+}
+.listFirstFood .itemListFirstFood::after
+{
+	content: "";
+	display: block;
+	clear: both;
+}
+.listFirstFood .itemListFirstFood .textListFirstFood
+{
+	line-height: 1.2;
+}
+.listFirstFood .itemListFirstFood .textListFirstFood .moreDesFirstFood
+{
+	position: absolute;
+	left: 80%;
+	bottom: 5%;
+}
+.listFirstFood .itemListFirstFood .textListFirstFood .moreDesFirstFood button
+{
+	outline: none;
+	border: none;
+	border-radius: 30px;
+	padding: 2%;
+	cursor: pointer;
+	background-color: coral;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+}
+.listFirstFood .itemListFirstFood .textListFirstFood .titleFirstFood
+{
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+.listFirstFood .itemListFirstFood .photoFirstFood img
+{
+	width: 180px;
+	height: 150px;
+	border-radius: 30px;
+	float: left;
+	margin-right: 20px;
+}
+.listSecondFood
+{
+	width: 70%;
+	margin: 100px auto;
+}
+.listSecondFood .itemSecondFood .titleSelectCountry
+{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	font-family: 'Lobster', cursive;
+	opacity: 0;
+	animation: effectMain 1s ease-in-out 0.6s 1 forwards;
+}
+.listSecondFood .itemSecondFood .foodCountry
+{
+	width: 100%;
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.listSecondFood .itemSecondFood .foodFrance
+{
+	width: 500px;
+	height: 200px;
+	margin-bottom: 100px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+	padding: 3%;
+	border-radius: 30px;
+	position: relative;
+}
+.listFirstFood .itemSecondFood .foodFrance::after
+{
+	content: "";
+	display: block;
+	clear: both;
+}
+.listSecondFood .itemSecondFood .foodFrance img
+{
+	width: 180px;
+	height: 150px;
+	border-radius: 30px;
+	float: left;
+	margin-right: 20px;
+}
+.listSecondFood .itemSecondFood .foodFrance .textFranceFood .titleFranceFood
+{
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+.listSecondFood .itemSecondFood .foodFrance .textFranceFood .desFranceFood
+{
+	line-height: 1.2;
+}
+
+#luaChonQuocGia
+{
+	outline: none;
+	border: none;
+	width: 150px;
+	height: 50px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.25);
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 15px;
+	opacity: 0;
+	animation: effectMain 1s ease-in-out 0.8s 1 forwards;
+}
+.listSecondFood .itemSecondFood .foodFrance .textFranceFood .moreDesFranceFood
+{
+	position: absolute;
+	left: 80%;
+	bottom: 5%;
+}
+.listSecondFood .itemSecondFood .foodFrance .textFranceFood .moreDesFranceFood button
+{
+	outline: none;
+	border: none;
+	border-radius: 30px;
+	padding: 2%;
+	cursor: pointer;
+	background-color: coral;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+}
+.listSecondFood .itemSecondFood .foodItaly
+{
+	width: 500px;
+	height: 200px;
+	margin-bottom: 100px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+	padding: 3%;
+	border-radius: 30px;
+	position: relative;
+}
+.listFirstFood .itemSecondFood .foodItaly::after
+{
+	content: "";
+	display: block;
+	clear: both;
+}
+.listSecondFood .itemSecondFood .foodItaly img
+{
+	width: 180px;
+	height: 150px;
+	border-radius: 30px;
+	float: left;
+	margin-right: 20px;
+}
+.listSecondFood .itemSecondFood .foodItaly .textItalyFood .titleItalyFood
+{
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+.listSecondFood .itemSecondFood .foodItaly .textItalyFood .desItalyFood
+{
+	line-height: 1.2;
+}
+.listSecondFood .itemSecondFood .foodItaly .textItalyFood .moreDesItalyFood
+{
+	position: absolute;
+	left: 80%;
+	bottom: 5%;
+}
+.listSecondFood .itemSecondFood .foodItaly .textItalyFood .moreDesItalyFood button
+{
+	outline: none;
+	border: none;
+	border-radius: 30px;
+	padding: 2%;
+	cursor: pointer;
+	background-color: coral;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+}
+.listSecondFood .itemSecondFood .foodJapan
+{
+	width: 500px;
+	height: 200px;
+	margin-bottom: 100px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+	padding: 3%;
+	border-radius: 30px;
+	position: relative;
+}
+.listFirstFood .itemSecondFood .foodJapan::after
+{
+	content: "";
+	display: block;
+	clear: both;
+}
+.listSecondFood .itemSecondFood .foodJapan img
+{
+	width: 180px;
+	height: 150px;
+	border-radius: 30px;
+	float: left;
+	margin-right: 20px;
+}
+.listSecondFood .itemSecondFood .foodJapan .textJapanFood .titleJapanFood
+{
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+.listSecondFood .itemSecondFood .foodJapan .textJapanFood .desJapanFood
+{
+	line-height: 1.2;
+}
+.listSecondFood .itemSecondFood .foodJapan .textJapanFood .moreDesJapanFood
+{
+	position: absolute;
+	left: 80%;
+	bottom: 5%;
+}
+.listSecondFood .itemSecondFood .foodJapan .textJapanFood .moreDesJapanFood button
+{
+	outline: none;
+	border: none;
+	border-radius: 30px;
+	padding: 2%;
+	cursor: pointer;
+	background-color: coral;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+}
+.listSecondFood .itemSecondFood .foodKorean
+{
+	width: 500px;
+	height: 200px;
+	margin-bottom: 100px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+	padding: 3%;
+	border-radius: 30px;
+	position: relative;
+}
+.listFirstFood .itemSecondFood .foodKorean::after
+{
+	content: "";
+	display: block;
+	clear: both;
+}
+.listSecondFood .itemSecondFood .foodKorean img
+{
+	width: 180px;
+	height: 150px;
+	border-radius: 30px;
+	float: left;
+	margin-right: 20px;
+}
+.listSecondFood .itemSecondFood .foodKorean .textKoreanFood .titleKoreanFood
+{
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+.listSecondFood .itemSecondFood .foodKorean .textKoreanFood .desKoreanFood
+{
+	line-height: 1.2;
+}
+.listSecondFood .itemSecondFood .foodKorean .textKoreanFood .moreDesKoreanFood
+{
+	position: absolute;
+	left: 80%;
+	bottom: 5%;
+}
+.listSecondFood .itemSecondFood .foodKorean .textKoreanFood .moreDesKoreanFood button
+{
+	outline: none;
+	border: none;
+	border-radius: 30px;
+	padding: 2%;
+	cursor: pointer;
+	background-color: coral;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
 }

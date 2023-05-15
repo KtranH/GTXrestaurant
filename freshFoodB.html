@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Nhà Hàng GTX (Món ăn chính)</title>
+</head>
+<body>
+	<div class="header">
+	<div class="logo">
+		<div class="hinh">
+		<img src="img/cutlery.png" alt="logo">
+		</div>
+		<div class="Ten">
+		<p><h1>GTX RESTAURANT</h1>Eatery and Wine</p>
+		</div>
+		</div>
+	<div class="menu">
+		<ul>
+			<li><a href="index.html"><img src="img/home.png" alt="home">Trang Chủ</a></li>	
+			<li class="foodMenu"><a href="food.html"><img src="img/restaurant.png" alt="food">Món ăn<i class="fa-solid fa-chevron-down"></i></a>
+			<ul class="food2Menu">
+				<li class="food2Menu1"><i class="fa-solid fa-carrot"></i><a href="#">Khai vị</a>
+					<ul class="food3Menu">
+						<li><i class="fa-solid fa-mug-hot"></i><a href="soup.html">Súp</a></li>
+						<li><i class="fa-solid fa-bread-slice"></i><a href="bread.html">Bánh Mì</a></li>
+						<li><i class="fa-solid fa-plate-wheat"></i><a href="vegetable.html">Rau</a></li>
+					</ul>
+				</li>
+				<li class="food2Menu2"><i class="fa-solid fa-bowl-food"></i><a href="#" style="color: red">Món chính</a>
+				<ul class="food3Menu1">
+						<li><i class="fa-solid fa-fish"></i><a href="freshFood.html" style="color: red">Món sống</a></li>
+						<li><i class="fa-solid fa-drumstick-bite"></i><a href="#">Món chín</a></li>
+					</ul>
+				</li>
+				<li><i class="fa-solid fa-cookie-bite"></i><a href="#">Tráng miệng</a></li>
+				<li><i class="fa-solid fa-wine-glass"></i><a href="#">Nước uống</a></li>
+			</ul>
+			</li>
+			<li><a href="table.html"><img src="./img/edit-table.png" alt="table">Đặt bàn</a></li>
+			<li><a href="location.html"><img src="img/location.png" alt="location">Vị Trí</a></li>
+			<li><a href="chef.html"><img src="img/chef.png" alt="chef">Đầu bếp</a></li>	
+			<li><a href="more.html"><img src="img/information.png" alt="more">Thông tin</a></li>
+		</ul>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="slide">
+		<div class="item">
+		<div class="hinhAnh">
+		<img src="img/Thiết kế chưa có tên (6).png" alt="Banner Image">	
+		</div>	
+		</div>
+			<div class="item">
+		<div class="hinhAnh">
+  		<img src="img/Thiết kế chưa có tên (7).png" alt="Banner Image">
+		</div>	
+		</div>
+			<div class="item">
+		<div class="hinhAnh">
+ 		 <img src="img/Thiết kế chưa có tên (8).png" alt="Banner Image">
+		</div>
+		</div>
+			<div class="item">
+		<div class="hinhAnh">
+		  <img src="img/Thiết kế chưa có tên (9).png" alt="Banner Image">
+		</div>
+		</div>
+		</div>
+		<div class="btn">
+			<button id ="prev"><i class="fa-solid fa-angles-left"></i></button>
+			<button id ="next"><i class="fa-solid fa-angles-right"></i></button>
+			</div>
+			<ul class = "dots">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+</div>
+	<script>
+		let slider = document.querySelector(".slide");
+		let item = document.querySelectorAll(".item");
+		let dots = document.querySelectorAll(".dots li");
+		let prev = document.getElementById("prev");
+		let next = document.getElementById("next");
+		let maxSlide = item.length - 1;
+		let active = 0;
+		next.onclick = function()
+		{
+			if(active + 1 > maxSlide)
+				{
+					active = 0;
+				}
+			else
+				{
+					active = active + 1;
+				}
+			reloadLayer();
+		}
+		prev.onclick = function()
+		{
+			if(active -1 < 0)
+				{
+					active = item.length - 1;
+				}
+			else
+				{
+					active = active - 1;
+				}
+			reloadLayer();
+		}
+		let reload = setInterval(() =>{
+			next.click()
+		},3000);
+		function reloadLayer()
+		{
+			slider.style.left = -item[active].offsetLeft + "px";
+			let dotsLastest = document.querySelector(".dots li.active");
+			dotsLastest.classList.remove("active");
+			dots[active].classList.add("active");
+			clearInterval(reload);
+			reload = setInterval(() =>{
+			next.click()
+		},3000);
+		}
+		for(let i = 0; i<dots.length;i++)
+			{
+				dots[i].addEventListener("click",()=>
+										{
+					active = i;
+					reloadLayer();
+
+				})
+			}
+	</script>
+	<!--<script>
+		const bannerImg = document.querySelectorAll(".banner img");
+		let index = 0;
+		setInterval(function(){
+					bannerImg[index].classList.remove("active");
+			index = (index + 1)%bannerImg.length;
+			bannerImg[index].classList.add("active");
+					}, 5000);
+	</script>-->
+	<div class="welcome">
+	<h2>GTX RESTAURANT</h2>
+		<img src="img/cutlery.png" alt="">
+	<h1>MÓN ĂN CHÍNH (Fresh Food)</h1>
+	</div>
+	<div class="listFirstFood">
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/vegetable/cach-lam-goi-cuon-tom-thit-cuc-ki-hap-dan-245587-800.jpg" alt="vegetable">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Gỏi cuốn
+		</div>
+		<div class="desFirstFood">
+		Gỏi cuốn là một món ăn truyền thống và phổ biến trong ẩm thực Việt Nam. Nó được làm từ bánh tráng mỏng được cuốn kín với các loại rau sống như rau diếp, rau bắp chuối, hành, rau thơm và thêm các thành phần khác như tôm, thịt gà hoặc đậu phụ.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/vegetable/cach-lam-goi-cuon-tom-thit-cuc-ki-hap-dan-245587-800.jpg" alt="vegetable">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Gỏi cuốn
+		</div>
+		<div class="desFirstFood">
+		Gỏi cuốn là một món ăn truyền thống và phổ biến trong ẩm thực Việt Nam. Nó được làm từ bánh tráng mỏng được cuốn kín với các loại rau sống như rau diếp, rau bắp chuối, hành, rau thơm và thêm các thành phần khác như tôm, thịt gà hoặc đậu phụ.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/vegetable/cach-lam-goi-cuon-tom-thit-cuc-ki-hap-dan-245587-800.jpg" alt="vegetable">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Gỏi cuốn
+		</div>
+		<div class="desFirstFood">
+		Gỏi cuốn là một món ăn truyền thống và phổ biến trong ẩm thực Việt Nam. Nó được làm từ bánh tráng mỏng được cuốn kín với các loại rau sống như rau diếp, rau bắp chuối, hành, rau thơm và thêm các thành phần khác như tôm, thịt gà hoặc đậu phụ.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/vegetable/cach-lam-goi-cuon-tom-thit-cuc-ki-hap-dan-245587-800.jpg" alt="vegetable">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Gỏi cuốn
+		</div>
+		<div class="desFirstFood">
+		Gỏi cuốn là một món ăn truyền thống và phổ biến trong ẩm thực Việt Nam. Nó được làm từ bánh tráng mỏng được cuốn kín với các loại rau sống như rau diếp, rau bắp chuối, hành, rau thơm và thêm các thành phần khác như tôm, thịt gà hoặc đậu phụ.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/vegetable/cach-lam-goi-cuon-tom-thit-cuc-ki-hap-dan-245587-800.jpg" alt="vegetable">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Gỏi cuốn
+		</div>
+		<div class="desFirstFood">
+		Gỏi cuốn là một món ăn truyền thống và phổ biến trong ẩm thực Việt Nam. Nó được làm từ bánh tráng mỏng được cuốn kín với các loại rau sống như rau diếp, rau bắp chuối, hành, rau thơm và thêm các thành phần khác như tôm, thịt gà hoặc đậu phụ.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/vegetable/cach-lam-goi-cuon-tom-thit-cuc-ki-hap-dan-245587-800.jpg" alt="vegetable">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Gỏi cuốn
+		</div>
+		<div class="desFirstFood">
+		Gỏi cuốn là một món ăn truyền thống và phổ biến trong ẩm thực Việt Nam. Nó được làm từ bánh tráng mỏng được cuốn kín với các loại rau sống như rau diếp, rau bắp chuối, hành, rau thơm và thêm các thành phần khác như tôm, thịt gà hoặc đậu phụ.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/vegetable/cach-lam-goi-cuon-tom-thit-cuc-ki-hap-dan-245587-800.jpg" alt="vegetable">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Gỏi cuốn
+		</div>
+		<div class="desFirstFood">
+		Gỏi cuốn là một món ăn truyền thống và phổ biến trong ẩm thực Việt Nam. Nó được làm từ bánh tráng mỏng được cuốn kín với các loại rau sống như rau diếp, rau bắp chuối, hành, rau thơm và thêm các thành phần khác như tôm, thịt gà hoặc đậu phụ.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/vegetable/caesar-salad-la-gi-cach-lam-chi-tiet-caesar-salad-avt-1200x676.jpg" alt="vegetable">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Caesar Salad
+		</div>
+		<div class="desFirstFood">
+		Caesar Salad là một món ăn nổi tiếng xuất phát từ Mexico. Nó được làm từ rau xanh như rau romaine, sốt Caesar (sốt mayonnaise, tỏi, trứng gà), bơi các thành phần khác như phô mai parmesan, bánh mì nướng và thịt gà nướng.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/vegetable/classic-caprese-salad-recipe-hero-05_1-9ce2f9b0601c45279e07320f9548fa66.jpg" alt="vegetable">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Caprese Salad
+		</div>
+		<div class="desFirstFood">
+		Caprese Salad là một món ăn Ý đơn giản nhưng ngon miệng. Nó được làm từ cà chua, phô mai mozzarella tươi, lá bạc hà và ngò tây, thường được chế biến với dầu ôliu, giấm balsamic, muối và tiêu.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/vegetable/disneys-ratatouille-ddmfs-4x3-0747-63a3c66850cb4f409ed40faae76d97b9.jpg" alt="vegetable">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Ratatouille
+		</div>
+		<div class="desFirstFood">
+		  Ratatouille là một món ăn truyền thống của Pháp. Nó là một món rau hầm được chế biến từ nhiều loại rau như cà chua, cà tím, ớt chuông, bí đỏ, hành tây và các gia vị như tỏi, thyme, hương thảo và dầu ôliu.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	</div>
+	<div class="countDown">
+	<div class="itemCount">
+	<div class="imgTime">
+	<img src="img/TOO_restaurant_Panoramique_vue_Paris_Seine_Tour_Eiffel_2.jpg" alt="img">	
+	</div>
+	<div class="time">
+		<div class="titleTime">
+		Thời gian khuyến mãi<br>Giảm 50% khi đặt bàn trực tuyến!
+		</div>
+		<div class="dayHour">
+		DAYS:
+		<div id="days">
+		05
+		</div>
+		HOURS:
+		<div id="hour">
+		12
+		</div>
+		MINUTES:
+		<div id="minute">
+		50
+		</div>
+		SECONDS:
+		<div id="second">
+		44
+		</div>
+		</div>
+		<div class="clickRec">
+		<div class="mess">
+		<i class="fa-solid fa-arrow-right-long"></i>Click để đặt bàn ngay!	
+		</div>
+		<button id = "dangKy">Đặt Bàn</button>
+		</div>
+		</div>
+
+	</div>
+	</div>
+	<script>
+    let endDate = new Date("06/30/2023 00:00:00").getTime();
+    let check = setInterval(function(){
+    let now = new Date().getTime();
+    let distance = endDate - now;
+    let day = Math.floor(distance / (24*60*60*1000));
+    let hour = Math.floor((distance % (24*60*60*1000)) / (60* 60*1000));
+    let minute = Math.floor((distance % (60* 60*1000)) / (60*1000));
+    let seconds = Math.floor((distance % (60*1000)) / 1000);
+	document.getElementById("days").innerText = day;
+	document.getElementById("hour").innerText = hour;
+	document.getElementById("minute").innerText = minute;
+	document.getElementById("second").innerText = seconds;
+    if(distance <= 0){
+        clearInterval(check);
+    }
+}, 1000);
+		</script>
+	<div class="footer">
+	<div class="leftFooter">
+		<ul>
+			<li><i class="fa-brands fa-facebook"></i>Facebook: GtxRes</li>
+			<li><i class="fa-brands fa-twitter"></i>Twitter: GtxT</li>
+			<li><i class="fa-brands fa-youtube"></i>Youtube: GtxChanel</li>
+			<li><i class="fa-solid fa-envelope"></i>Email: GtxResTian@gmail.com</li>
+			<li><i class="fa-solid fa-phone"></i>Phone: 0942316579</li>
+		</ul>
+	</div>
+	<div class="centerFooter">
+		<div class="tilteFooter">Sự hài lòng của bạn là niềm tự hào của chúng tôi</div>
+		<ul>
+			<li>Trần Hoàng Anh Khôi</li>
+			<li>Điền tên vào đây</li>
+			<li>Điền tên vào đây</li>
+		</ul>
+	</div>
+	<div class="rightFooter">
+		<ul>
+			<li>123 Main Street, Anytown, USA</li>
+			<li>456 Park Avenue, Cityville, USA</li>
+			<li>789 Elm Street, Villagetown, USA</li>
+			<li>321 Oak Avenue, Townsville, USA</li>
+			<li>987 Pine Road, Boroughville, USA</li>
+		</ul>
+	</div>
+	</div>
+</body>
+</html>

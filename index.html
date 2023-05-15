@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="img/cutlery.png">
 <title>Nhà Hàng GTX</title>
 </head>
 <body>
@@ -19,19 +20,19 @@
 	<div class="menu">
 		<ul>
 			<li><a href="index.html" style="color: red"><img src="img/home.png" alt="home">Trang Chủ</a></li>	
-			<li class="foodMenu"><a href="food.html"><img src="img/restaurant.png" alt="food">Món ăn</a>
+			<li class="foodMenu"><a href="#"><img src="img/restaurant.png" alt="food">Món ăn<i class="fa-solid fa-chevron-down"></i></a>
 			<ul class="food2Menu">
 				<li class="food2Menu1"><i class="fa-solid fa-carrot"></i><a href="#">Khai vị</a>
 					<ul class="food3Menu">
-						<li><i class="fa-solid fa-mug-hot"></i><a href="#">Súp</a></li>
-						<li><i class="fa-solid fa-bread-slice"></i><a href="#">Bánh Mì</a></li>
-						<li><i class="fa-solid fa-plate-wheat"></i><a href="#">Rau</a></li>
+						<li><i class="fa-solid fa-mug-hot"></i><a href="soup.html">Súp</a></li>
+						<li><i class="fa-solid fa-bread-slice"></i><a href="bread.html">Bánh Mì</a></li>
+						<li><i class="fa-solid fa-plate-wheat"></i><a href="vegetable.html">Rau</a></li>
 					</ul>
 				</li>
 				<li class="food2Menu2"><i class="fa-solid fa-bowl-food"></i><a href="#">Món chính</a>
 				<ul class="food3Menu1">
-						<li><i class="fa-solid fa-fish"></i><a href="#">Món sống</a></li>
-						<li><i class="fa-solid fa-drumstick-bite"></i><a href="#">Món chín</a></li>
+						<li><i class="fa-solid fa-earth-americas"></i><a href="freshFood.html">Nước Ngoài</a></li>
+						<li><i class="fa-solid fa-earth-asia"></i><a href="#">Việt Nam</a></li>
 					</ul>
 				</li>
 				<li><i class="fa-solid fa-cookie-bite"></i><a href="#">Tráng miệng</a></li>
@@ -472,7 +473,7 @@
 	</div>
 	</div>
 	<script>
-let endDate = new Date("05/15/2023 00:00:00").getTime();
+let endDate = new Date("06/30/2023 00:00:00").getTime();
 let check = setInterval(function(){
     let now = new Date().getTime();
     let distance = endDate - now;

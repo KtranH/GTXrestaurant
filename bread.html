@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Nhà Hàng GTX (Món ăn khai vị)</title>
+</head>
+<body>
+	<div class="header">
+	<div class="logo">
+		<div class="hinh">
+		<img src="img/cutlery.png" alt="logo">
+		</div>
+		<div class="Ten">
+		<p><h1>GTX RESTAURANT</h1>Eatery and Wine</p>
+		</div>
+		</div>
+	<div class="menu">
+		<ul>
+			<li><a href="index.html"><img src="img/home.png" alt="home">Trang Chủ</a></li>	
+			<li class="foodMenu"><a href="#" style="color: red"><img src="img/restaurant.png" alt="food">Món ăn<i class="fa-solid fa-chevron-down"></i></a>
+			<ul class="food2Menu">
+				<li class="food2Menu1"><i class="fa-solid fa-carrot"></i><a href="#">Khai vị</a>
+					<ul class="food3Menu">
+						<li><i class="fa-solid fa-mug-hot"></i><a href="soup.html">Súp</a></li>
+						<li><i class="fa-solid fa-bread-slice"></i><a href="bread.html" style="color: red">Bánh Mì</a></li>
+						<li><i class="fa-solid fa-plate-wheat"></i><a href="vegetable.html">Rau</a></li>
+					</ul>
+				</li>
+				<li class="food2Menu2"><i class="fa-solid fa-bowl-food"></i><a href="#">Món chính</a>
+				<ul class="food3Menu1">
+						<li><i class="fa-solid fa-earth-americas"></i><a href="freshFood.html">Nước Ngoài</a></li>
+						<li><i class="fa-solid fa-earth-asia"></i><a href="#">Việt Nam</a></li>
+					</ul>
+				</li>
+				<li><i class="fa-solid fa-cookie-bite"></i><a href="#">Tráng miệng</a></li>
+				<li><i class="fa-solid fa-wine-glass"></i><a href="#">Nước uống</a></li>
+			</ul>
+			</li>
+			<li><a href="table.html"><img src="./img/edit-table.png" alt="table">Đặt bàn</a></li>
+			<li><a href="location.html"><img src="img/location.png" alt="location">Vị Trí</a></li>
+			<li><a href="chef.html"><img src="img/chef.png" alt="chef">Đầu bếp</a></li>	
+			<li><a href="more.html"><img src="img/information.png" alt="more">Thông tin</a></li>
+		</ul>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="slide">
+		<div class="item">
+		<div class="hinhAnh">
+		<img src="img/Thiết kế chưa có tên (6).png" alt="Banner Image">	
+		</div>	
+		</div>
+			<div class="item">
+		<div class="hinhAnh">
+  		<img src="img/Thiết kế chưa có tên (7).png" alt="Banner Image">
+		</div>	
+		</div>
+			<div class="item">
+		<div class="hinhAnh">
+ 		 <img src="img/Thiết kế chưa có tên (8).png" alt="Banner Image">
+		</div>
+		</div>
+			<div class="item">
+		<div class="hinhAnh">
+		  <img src="img/Thiết kế chưa có tên (9).png" alt="Banner Image">
+		</div>
+		</div>
+		</div>
+		<div class="btn">
+			<button id ="prev"><i class="fa-solid fa-angles-left"></i></button>
+			<button id ="next"><i class="fa-solid fa-angles-right"></i></button>
+			</div>
+			<ul class = "dots">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+</div>
+	<script>
+		let slider = document.querySelector(".slide");
+		let item = document.querySelectorAll(".item");
+		let dots = document.querySelectorAll(".dots li");
+		let prev = document.getElementById("prev");
+		let next = document.getElementById("next");
+		let maxSlide = item.length - 1;
+		let active = 0;
+		next.onclick = function()
+		{
+			if(active + 1 > maxSlide)
+				{
+					active = 0;
+				}
+			else
+				{
+					active = active + 1;
+				}
+			reloadLayer();
+		}
+		prev.onclick = function()
+		{
+			if(active -1 < 0)
+				{
+					active = item.length - 1;
+				}
+			else
+				{
+					active = active - 1;
+				}
+			reloadLayer();
+		}
+		let reload = setInterval(() =>{
+			next.click()
+		},3000);
+		function reloadLayer()
+		{
+			slider.style.left = -item[active].offsetLeft + "px";
+			let dotsLastest = document.querySelector(".dots li.active");
+			dotsLastest.classList.remove("active");
+			dots[active].classList.add("active");
+			clearInterval(reload);
+			reload = setInterval(() =>{
+			next.click()
+		},3000);
+		}
+		for(let i = 0; i<dots.length;i++)
+			{
+				dots[i].addEventListener("click",()=>
+										{
+					active = i;
+					reloadLayer();
+				})
+			}
+	</script>
+
+	<!--<script>
+		const bannerImg = document.querySelectorAll(".banner img");
+		let index = 0;
+		setInterval(function(){
+					bannerImg[index].classList.remove("active");
+			index = (index + 1)%bannerImg.length;
+			bannerImg[index].classList.add("active");
+					}, 5000);
+	</script>-->
+	<div class="welcome">
+	<h2>GTX RESTAURANT</h2>
+		<img src="img/cutlery.png" alt="">
+	<h1>MÓN ĂN KHAI VỊ (Bánh Mì)</h1>
+	</div>
+	<div class="listFirstFood">
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/bread/as-tomato-bruschetta-threeByTwoMediumAt2X.jpg" alt="bread">
+	</div>
+	<div class="textListFirstFood">
+	<div class="titleFirstFood">
+		Bruschetta
+		</div>
+		<div class="desFirstFood">
+		Món Bruschetta xuất phát từ Ý và trở thành một món khai vị phổ biến trên toàn thế giới. Nó bao gồm bánh mì nướng giòn, thường được trang trí với các loại topping như cà chua, tỏi, hành, basil và dầu ôliu.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/bread/ranch-club-crostini-RDP.jpg" alt="bread">
+	</div>
+	<div class="textListFirstFood">
+	<div class="titleFirstFood">
+		Crostini
+		</div>
+		<div class="desFirstFood">
+		Crostini cũng là một món khai vị ngon miệng. Nó được làm từ bánh mì cắt thành miếng nhỏ, nướng giòn và thường được chấm với gia vị như pate, sốt hành tây, hay phô mai.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/bread/pate-la-gi-loi-ich-cua-viec-an-pate-va-nhung-luu-y-khi-su-8-800x432.jpg" alt="bread">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Bánh mì pâtê
+		</div>
+		<div class="desFirstFood">
+		Món pâtê là một món khai vị truyền thống. Bánh mì pâtê thường được làm từ bánh mì mềm, được bôi đầy pâtê thịt và thường đi kèm với các loại muối dưa và rau sống.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/bread/BaconandEggCanapes-014.jpg" alt="bread">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Canapé
+		</div>
+		<div class="desFirstFood">
+		Canapé là một loại bánh mì nhỏ được cắt thành hình dạng đẹp mắt và trang trí độc đáo. Chúng thường được phủ đầy các loại nhân như cá hồi, thịt nguội, phô mai và các loại gia vị sáng tạo.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/bread/banh-mi-nuong-bo-toi.jpg" alt="bread">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Bánh mì nướng với sốt tỏi
+		</div>
+		<div class="desFirstFood">
+		Món này đơn giản nhưng ngon miệng. Bánh mì được nướng giòn, sau đó được xát tỏi và trang trí với bơ tỏi. Món này thường được ăn kèm với các món khác như súp, salad hay pasta.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemListFirstFood">
+	<div class="photoFirstFood">
+	<img src="food/khaiVi/bread/maxresdefault-2.jpg" alt="bread">
+	</div>
+	<div class="textListFirstFood">
+		<div class="titleFirstFood">
+		Bánh mì nướng với sốt ớt
+		</div>
+		<div class="desFirstFood">
+		 Bánh mì nướng với sốt ớt là một món khai vị cay nồng và ngon miệng. Bánh mì được nướng giòn và sau đó trang trí với sốt ớt tươi hoặc sốt ớt chua cay.
+		</div>
+		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	</div>
+	<div class="countDown">
+	<div class="itemCount">
+	<div class="imgTime">
+	<img src="img/TOO_restaurant_Panoramique_vue_Paris_Seine_Tour_Eiffel_2.jpg" alt="img">	
+	</div>
+	<div class="time">
+		<div class="titleTime">
+		Thời gian khuyến mãi<br>Giảm 50% khi đặt bàn trực tuyến!
+		</div>
+		<div class="dayHour">
+		DAYS:
+		<div id="days">
+		05
+		</div>
+		HOURS:
+		<div id="hour">
+		12
+		</div>
+		MINUTES:
+		<div id="minute">
+		50
+		</div>
+		SECONDS:
+		<div id="second">
+		44
+		</div>
+		</div>
+		<div class="clickRec">
+		<div class="mess">
+		<i class="fa-solid fa-arrow-right-long"></i>Click để đặt bàn ngay!	
+		</div>
+		<button id = "dangKy">Đặt Bàn</button>
+		</div>
+		</div>
+	</div>
+	</div>
+	<script>
+    let endDate = new Date("06/30/2023 00:00:00").getTime();
+    let check = setInterval(function(){
+    let now = new Date().getTime();
+    let distance = endDate - now;
+    let day = Math.floor(distance / (24*60*60*1000));
+    let hour = Math.floor((distance % (24*60*60*1000)) / (60* 60*1000));
+    let minute = Math.floor((distance % (60* 60*1000)) / (60*1000));
+    let seconds = Math.floor((distance % (60*1000)) / 1000);
+	document.getElementById("days").innerText = day;
+	document.getElementById("hour").innerText = hour;
+	document.getElementById("minute").innerText = minute;
+	document.getElementById("second").innerText = seconds;
+    if(distance <= 0){
+        clearInterval(check);
+    }
+}, 1000);
+		</script>
+	<div class="footer">
+	<div class="leftFooter">
+		<ul>
+			<li><i class="fa-brands fa-facebook"></i>Facebook: GtxRes</li>
+			<li><i class="fa-brands fa-twitter"></i>Twitter: GtxT</li>
+			<li><i class="fa-brands fa-youtube"></i>Youtube: GtxChanel</li>
+			<li><i class="fa-solid fa-envelope"></i>Email: GtxResTian@gmail.com</li>
+			<li><i class="fa-solid fa-phone"></i>Phone: 0942316579</li>
+		</ul>
+	</div>
+	<div class="centerFooter">
+		<div class="tilteFooter">Sự hài lòng của bạn là niềm tự hào của chúng tôi</div>
+		<ul>
+			<li>Trần Hoàng Anh Khôi</li>
+			<li>Điền tên vào đây</li>
+			<li>Điền tên vào đây</li>
+		</ul>
+	</div>
+	<div class="rightFooter">
+		<ul>
+			<li>123 Main Street, Anytown, USA</li>
+			<li>456 Park Avenue, Cityville, USA</li>
+			<li>789 Elm Street, Villagetown, USA</li>
+			<li>321 Oak Avenue, Townsville, USA</li>
+			<li>987 Pine Road, Boroughville, USA</li>
+		</ul>
+	</div>
+	</div>
+</body>
+</html>
