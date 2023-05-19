@@ -4,9 +4,8 @@
 <meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	<link rel="icon" href="img/logo.png" type="image/x-icon">
 	<link rel="shortcut icon" type="image/x-icon" href="img/cutlery.png">
-<title>GTX | Khai vị</title>
+<title>GTX | Món chính</title>
 </head>
 <body>
 	<div class="header">
@@ -27,13 +26,13 @@
 					<ul class="food3Menu">
 						<li><i class="fa-solid fa-mug-hot"></i><a href="soup.html">Súp</a></li>
 						<li><i class="fa-solid fa-bread-slice"></i><a href="bread.html">Bánh Mì</a></li>
-						<li><i class="fa-solid fa-plate-wheat"></i><a href="vegetable.html" style="color: red">Rau</a></li>
+						<li><i class="fa-solid fa-plate-wheat"></i><a href="vegetable.html">Rau</a></li>
 					</ul>
 				</li>
-				<li class="food2Menu2"><i class="fa-solid fa-bowl-food"></i><a href="#">Món chính</a>
+				<li class="food2Menu2"><i class="fa-solid fa-bowl-food"></i><a href="#" style="color: red">Món chính</a>
 				<ul class="food3Menu1">
 						<li><i class="fa-solid fa-earth-americas"></i><a href="freshFood.html">Nước Ngoài</a></li>
-						<li><i class="fa-solid fa-earth-asia"></i><a href="VietnamfoodPage1.html">Việt Nam</a></li>
+						<li><i class="fa-solid fa-earth-asia"></i><a href="VietnamfoodPage1.html" style="color: red">Việt Nam</a></li>
 					</ul>
 				</li>
 				<li><i class="fa-solid fa-cookie-bite"></i><a href="dessert.html">Tráng miệng</a></li>
@@ -127,6 +126,7 @@
 			next.click()
 		},3000);
 		}
+
 		for(let i = 0; i<dots.length;i++)
 			{
 				dots[i].addEventListener("click",()=>
@@ -149,65 +149,124 @@
 	<div class="welcome">
 	<h2>GTX RESTAURANT</h2>
 		<img src="img/cutlery.png" alt="">
-	<h1>MÓN ĂN KHAI VỊ (Rau)</h1>
+	<h1>MÓN ĂN CHÍNH (VIỆT NAM)</h1>
 	</div>
-	<div class="listFirstFood">
-	<div class="itemListFirstFood">
-	<div class="photoFirstFood">
-	<img src="food/khaiVi/vegetable/cach-lam-goi-cuon-tom-thit-cuc-ki-hap-dan-245587-800.jpg" alt="vegetable">
+	<div class="VietNamFood">
+	<div class="itemVietNamfood">
+	<div class="photoVietNamFood">
+	<img src="food/Chinh/vietNam/huong-dan-cach-chien-cha-gio-bang-noi-chien-khong-dau-gion-rum-vang-dep-202112061717296161.jpg" alt="vietnam">
 	</div>
-	<div class="textListFirstFood">
-		<div class="titleFirstFood">
-		Gỏi cuốn
-		</div>
-		<div class="desFirstFood">
-		Gỏi cuốn là một món ăn truyền thống và phổ biến trong ẩm thực Việt Nam. Nó được làm từ bánh tráng mỏng được cuốn kín với các loại rau sống như rau diếp, rau bắp chuối, hành, rau thơm và thêm các thành phần khác như tôm, thịt gà hoặc đậu phụ.
-		</div>
-		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	<div class="textVietNamFood">
+	<div class="titleVietNamFood">
+	Chả giò
 	</div>
+	<div class="desVietNamFood">
+	Món ăn chiên giòn được làm từ những tấm bánh tráng mỏng được cuốn với nhân từ thịt, tôm, nấm và các loại rau thơm như hành, tỏi.
 	</div>
-	<div class="itemListFirstFood">
-	<div class="photoFirstFood">
-	<img src="food/khaiVi/vegetable/caesar-salad-la-gi-cach-lam-chi-tiet-caesar-salad-avt-1200x676.jpg" alt="vegetable">
-	</div>
-	<div class="textListFirstFood">
-		<div class="titleFirstFood">
-		Caesar Salad
-		</div>
-		<div class="desFirstFood">
-		Caesar Salad là một món ăn nổi tiếng xuất phát từ Mexico. Nó được làm từ rau xanh như rau romaine, sốt Caesar (sốt mayonnaise, tỏi, trứng gà), bơi các thành phần khác như phô mai parmesan, bánh mì nướng và thịt gà nướng.
-		</div>
-		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	<a href="#" class ="moreDesVietNamFood"><button>Xem chi tiết</button></a>
 	</div>
 	</div>
-	<div class="itemListFirstFood">
-	<div class="photoFirstFood">
-	<img src="food/khaiVi/vegetable/classic-caprese-salad-recipe-hero-05_1-9ce2f9b0601c45279e07320f9548fa66.jpg" alt="vegetable">
+	<div class="itemVietNamfood">
+	<div class="photoVietNamFood">
+	<img src="food/Chinh/vietNam/Tri-vet-phat-foods-cach-lam-tom-nuong-pho-mai-beo-ngau-an-mai-khong-thoi.jpg" alt="vietnam">	
 	</div>
-	<div class="textListFirstFood">
-		<div class="titleFirstFood">
-		Caprese Salad
-		</div>
-		<div class="desFirstFood">
-		Caprese Salad là một món ăn Ý đơn giản nhưng ngon miệng. Nó được làm từ cà chua, phô mai mozzarella tươi, lá bạc hà và ngò tây, thường được chế biến với dầu ôliu, giấm balsamic, muối và tiêu.
-		</div>
-		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	<div class="textVietNamFood">
+	<div class="titleVietNamFood">
+	Tôm nướng mỡ hành 
 	</div>
+	<div class="desVietNamFood">
+	Món ăn sử dụng tôm tươi, được nướng chín trên lửa than hoa. Sau khi tôm chín, mỡ hành thơm phức được đặt lên tôm, tạo nên hương vị đặc trưng.
 	</div>
-	<div class="itemListFirstFood">
-	<div class="photoFirstFood">
-	<img src="food/khaiVi/vegetable/disneys-ratatouille-ddmfs-4x3-0747-63a3c66850cb4f409ed40faae76d97b9.jpg" alt="vegetable">
-	</div>
-	<div class="textListFirstFood">
-		<div class="titleFirstFood">
-		Ratatouille
-		</div>
-		<div class="desFirstFood">
-		  Ratatouille là một món ăn truyền thống của Pháp. Nó là một món rau hầm được chế biến từ nhiều loại rau như cà chua, cà tím, ớt chuông, bí đỏ, hành tây và các gia vị như tỏi, thyme, hương thảo và dầu ôliu.
-		</div>
-		<a href="#" class ="moreDesFirstFood"><button>Xem chi tiết</button></a>
+	<a href="#" class ="moreDesVietNamFood"><button>Xem chi tiết</button></a>
 	</div>
 	</div>
+	<div class="itemVietNamfood">
+	<div class="photoVietNamFood">
+	<img src="food/Chinh/vietNam/1200-1200x676-16.jpg" alt="vietnam">	
+	</div>
+	<div class="textVietNamFood">
+	<div class="titleVietNamFood">
+	Mì Quảng
+	</div>
+	<div class="desVietNamFood">
+	Món ăn bao gồm mì gói từ bột gạo, thường có màu vàng đặc trưng, được ăn kèm với nước dùng đậm đà từ thịt heo, gà hoặc hải sản. Bên trên mì là các loại rau sống như rau thơm, rau sống, hành phi, đậu phụng rang và bánh tráng giòn. 
+	</div>
+	<a href="#" class ="moreDesVietNamFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemVietNamfood">
+	<div class="photoVietNamFood">
+	<img src="food/Chinh/vietNam/maxresdefault.jpg" alt="vietnam">	
+	</div>
+	<div class="textVietNamFood">
+	<div class="titleVietNamFood">
+	Bò lúc lắc 	
+	</div>
+	<div class="desVietNamFood">
+	Món ăn bao gồm thịt bò xào lúc lắc, có màu nâu và đặc trưng. Thịt bò được xào nhanh trên lửa lớn để giữ được độ mềm mịn. Bên cạnh thịt bò. Nước sốt đặc biệt, thường là nước sốt pha từ tỏi, nước mắm, đường và gia vị khác, được rót lên trên thịt bò và rau sống.
+	</div>
+	<a href="#" class ="moreDesVietNamFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemVietNamfood">
+	<div class="photoVietNamFood">
+	<img src="food/Chinh/vietNam/ca-kho-to.jpg" alt="vietnam">	
+	</div>
+	<div class="textVietNamFood">
+	<div class="titleVietNamFood">
+	Cá trắm kho tiêu	
+	</div>
+	<div class="desVietNamFood">
+	Món ăn được chế biến từ cá trắm tươi ngon, được kho chín mềm trong nồi đất với gia vị và tiêu. Cá trắm kho tiêu có hương vị đậm đà, thịt cá mềm mại và thấm đều vị của nước mắm, đường, tiêu và các gia vị khác.
+	</div>
+	<a href="#" class ="moreDesVietNamFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemVietNamfood">
+	<div class="photoVietNamFood">
+	<img src="food/Chinh/vietNam/cach-nau-com-ga-hai-nam-don-gian-ga-chin-vang-uom-da-gion-dung-chuan-202112281045139511.jpg" alt="vietnam">	
+	</div>
+	<div class="textVietNamFood">
+	<div class="titleVietNamFood">
+	Cơm gà Hải Nam	
+	</div>
+	<div class="desVietNamFood">
+	Món ăn được làm từ gà tươi ngon và thơm mùi. Gà được nấu chín trong nước dùng thơm ngon và được phục vụ cùng với cơm trắng.
+	</div>
+	<a href="#" class ="moreDesVietNamFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemVietNamfood">
+	<div class="photoVietNamFood">
+	<img src="food/Chinh/vietNam/goi-buoi-tom-thit-thumbnail.jpg" alt="vietnam">	
+	</div>
+	<div class="textVietNamFood">
+	<div class="titleVietNamFood">
+	Gỏi tôm thịt 
+	</div>
+	<div class="desVietNamFood">
+	 Món gỏi tôm thịt ngon là sự kết hợp của tôm, thịt, rau sống và nước mắm chua ngọt.
+	</div>
+	<a href="#" class ="moreDesVietNamFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	<div class="itemVietNamfood">
+	<div class="photoVietNamFood">
+	<img src="food/Chinh/vietNam/234.jpg" alt="vietnam">	
+	</div>
+	<div class="textVietNamFood">
+	<div class="titleVietNamFood">
+	Bánh cuốn Thanh Trì	
+	</div>
+	<div class="desVietNamFood">
+	Bánh cuốn được làm từ bột gạo mịn và mỏng, sau đó được cuốn thành những tấm mỏng như lá và nấu chín trên nồi hấp. Bánh cuốn Thanh Trì thường được ăn kèm với thịt nướng, mỡ hành và nước mắm chua ngọt.</div>
+	<a href="#" class ="moreDesVietNamFood"><button>Xem chi tiết</button></a>
+	</div>
+	</div>
+	</div>
+	<div class="nextPage">
+	<a href="VietnamfoodPage1.html"><button class ="nextPage1">1</button></a>
+	<a href="VietnamfoodPage2.html"><button class ="nextPage2">2</button></a>
 	</div>
 	<div class="countDown">
 	<div class="itemCount">

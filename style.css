@@ -1,6 +1,5 @@
 /* CSS Document */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script&family=Lobster&family=Montserrat+Alternates:wght@900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Calistoga&family=Dancing+Script&family=Lobster&family=Mea+Culpa&family=Montserrat+Alternates:wght@900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap');
 *
 {
 	padding: 0;
@@ -162,12 +161,12 @@ a
 	transition: all 1s;
 	opacity: 0;
 }
-.food2Menu2:hover > .food3Menu1
+.food2Menu2:hover .food3Menu1
 {
 	width: 250px;
 	opacity: 1;
 }
-.food2Menu1:hover> .food3Menu
+.food2Menu1:hover .food3Menu
 {
 	width: 250px;
 	opacity: 1;
@@ -338,12 +337,12 @@ a
 .welcome h1
 {
 	margin-top: 20px;
-	font-weight: bold;
 	font-size: 50px;
 	opacity: 0;
 	animation: effectMain 1s ease-in-out 0.6s 1 forwards;
 	position: relative;
-	font-family: 'Righteous', cursive;
+	font-family: 'Calistoga', cursive;
+	font-weight: bold;
 }
 .welcome h1::after
 {
@@ -922,6 +921,7 @@ a
 	border-radius: 30px;
 	float: left;
 	margin-right: 20px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 .listSecondFood
 {
@@ -968,6 +968,7 @@ a
 	border-radius: 30px;
 	float: left;
 	margin-right: 20px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 .listSecondFood .itemSecondFood .foodFrance .textFranceFood .titleFranceFood
 {
@@ -1035,6 +1036,7 @@ a
 	border-radius: 30px;
 	float: left;
 	margin-right: 20px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 .listSecondFood .itemSecondFood .foodItaly .textItalyFood .titleItalyFood
 {
@@ -1088,6 +1090,7 @@ a
 	border-radius: 30px;
 	float: left;
 	margin-right: 20px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 .listSecondFood .itemSecondFood .foodJapan .textJapanFood .titleJapanFood
 {
@@ -1141,6 +1144,7 @@ a
 	border-radius: 30px;
 	float: left;
 	margin-right: 20px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 .listSecondFood .itemSecondFood .foodKorean .textKoreanFood .titleKoreanFood
 {
@@ -1170,4 +1174,149 @@ a
 	color: white;
 	font-weight: bold;
 	font-size: 15px;
+}
+.VietNamFood
+{
+	width: 70%;
+	margin: 100px auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.VietNamFood .itemVietNamfood
+{
+	width: 500px;
+	height: 200px;
+	margin-bottom: 100px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+	padding: 3%;
+	border-radius: 30px;
+	position: relative;
+}
+.VietNamFood .itemVietNamfood .photoVietNamFood img
+{
+	width: 180px;
+	height: 150px;
+	border-radius: 30px;
+	float: left;
+	margin-right: 20px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.VietNamFood .itemVietNamfood .textVietNamFood .titleVietNamFood
+{
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+.VietNamFood .itemVietNamfood .textVietNamFood .desVietNamFood
+{
+	line-height: 1.2;
+}
+.VietNamFood .itemVietNamfood .textVietNamFood .moreDesVietNamFood
+{
+	position: absolute;
+	left: 80%;
+	bottom: 5%;
+}
+.VietNamFood .itemVietNamfood .textVietNamFood .moreDesVietNamFood button
+{
+	outline: none;
+	border: none;
+	border-radius: 30px;
+	padding: 2%;
+	cursor: pointer;
+	background-color: coral;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+}
+.nextPage
+{
+	margin-top: -80px;
+	width: 100%;
+	height: 80px;
+	background-color: coral;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nextPage .nextPage1, .nextPage2
+{
+	cursor: pointer;
+	margin: 0 auto;
+	width: 50px;
+	margin-right: 20px;
+	height: 50px;
+	background-color: white;
+	outline: none;
+	border: none;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 50%;
+}
+.containerDessertFood
+{
+	width: 70%;
+	margin: 100px auto;
+}
+.containerDessertFood .itemDessertFood
+{
+	width: 100%;
+	margin-bottom: 50px;
+}
+.containerDessertFood .itemDessertFood .photoDessertFood
+{
+	width: 512px;
+	margin: 0 auto;
+}
+.containerDessertFood .itemDessertFood .photoDessertFood img
+{
+	width: 512px;
+	height: 312px;
+	object-fit: cover;
+	border-radius: 10px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.containerDessertFood .itemDessertFood .textDessertFood .titleDessertFood
+{
+	font-weight: bold;
+	font-size: 40px;
+	font-family: 'Lobster', cursive;
+	
+}
+.containerDessertFood .itemDessertFood .textDessertFood
+{
+	text-align: center;
+	width: 80%;
+	margin: 50px auto;
+	line-height: 1.5;
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
+	padding: 2%;
+	border-radius: 30px;	
+}
+.containerDessertFood .itemDessertFood .textDessertFood::after
+{
+	display: block;
+}
+.containerDessertFood .itemDessertFood .textDessertFood .desDessertFood
+{
+	font-size: 18px;
+}
+.containerDessertFood .itemDessertFood .textDessertFood .moreDessertFood
+{
+	margin-top: 10px;
+}
+.containerDessertFood .itemDessertFood .textDessertFood .moreDessertFood button
+{
+	outline: none;
+	border: none;
+	border-radius: 30px;
+	padding: 1%;
+	cursor: pointer;
+	background-color: coral;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
 }
