@@ -1284,7 +1284,6 @@ a
 	font-weight: bold;
 	font-size: 40px;
 	font-family: 'Lobster', cursive;
-	
 }
 .containerDessertFood .itemDessertFood .textDessertFood
 {
@@ -1292,7 +1291,7 @@ a
 	width: 80%;
 	margin: 50px auto;
 	line-height: 1.5;
-	box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 	padding: 2%;
 	border-radius: 30px;	
 }
@@ -1319,4 +1318,169 @@ a
 	color: white;
 	font-weight: bold;
 	font-size: 18px;
+}
+.containerDinks
+{
+	width: 70%;
+	margin: 100px auto;
+}
+.containerDinks .mineralWater
+{
+	width: 100%;
+}
+.containerDinks .mineralWater .itemMineralWater
+{
+	margin-top: 30px;
+	margin-right: 20px;
+	width: 240px;
+	height: 350px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	border-radius: 30px;
+	display: inline-block;
+}
+.containerDinks .mineralWater .itemMineralWater .photoMineralWater img
+{
+	width: 212px;
+	height: 200px;
+	margin-left: 13px;
+	margin-top: 10px;
+}
+.containerDinks .mineralWater .itemMineralWater .titleMineralWater
+{
+	font-size: 30px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	width: 100%;
+	margin: 10px;
+	height: 95px;
+}
+.containerDinks .mineralWater .itemMineralWater .priceOfMineralWater
+{
+	font-weight: bold;
+	font-size: 18px;
+	width: 100%;
+	background-color: coral;
+	color: white;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.containerDinks .mineralWater .itemMineralWater .priceOfMineralWater span
+{
+	margin-left: 10px;
+}
+.containerDinks .mineralWater h1
+{
+	font-size: 40px;
+	font-weight: bold;
+	width: 100%;
+	border-bottom: 4px solid coral;	
+}
+.containerDinks .softDrink
+{
+	width: 100%;
+	margin-top: 50px;
+}
+.containerDinks .softDrink .itemSoftDrink
+{
+	margin-top: 30px;
+	margin-right: 20px;
+	width: 240px;
+	height: 350px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	border-radius: 30px;
+	display: inline-block;
+}
+.containerDinks .softDrink .itemSoftDrink .photoSoftDrink img
+{
+	width: 212px;
+	height: 160px;
+	margin-left: 13px;
+	margin-top: 20px;
+}
+.containerDinks .softDrink .itemSoftDrink .titleSoftDrink
+{
+	font-size: 30px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	width: 100%;
+	margin: 10px;
+	height: 95px;
+}
+.containerDinks .softDrink .itemSoftDrink .priceOfSoftDrink
+{
+	font-weight: bold;
+	font-size: 18px;
+	width: 100%;
+	background-color: coral;
+	color: white;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.containerDinks .softDrink .itemSoftDrink .priceOfSoftDrink span
+{
+	margin-left: 10px;
+}
+.containerDinks .softDrink h1
+{
+	font-size: 40px;
+	font-weight: bold;
+	width: 100%;
+	border-bottom: 4px solid coral;	
+}
+.containerDinks .beerDrink
+{
+	width: 100%;
+	margin-top: 50px;
+}
+.containerDinks .beerDrink .itemBeerDrink
+{
+	margin-top: 30px;
+	margin-right: 20px;
+	width: 240px;
+	height: 350px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	border-radius: 30px;
+	display: inline-block;
+}
+.containerDinks .beerDrink .itemBeerDrink .photoBeerDrink img
+{
+	width: 212px;
+	height: 160px;
+	margin-left: 13px;
+	margin-top: 20px;
+}
+.containerDinks .beerDrink .itemBeerDrink .titleBeerDrink
+{
+	font-size: 30px;
+	height: 95px;
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	width: 100%;
+}
+.containerDinks .beerDrink .itemBeerDrink .titleBeerDrink span
+{
+	width: 100%;
+	height: 95px;
+	text-align: center;
+	align-content: center;
+}
+.containerDinks .beerDrink .itemBeerDrink .priceOfBeerDrink
+{
+	font-weight: bold;
+	font-size: 18px;
+	width: 100%;
+	background-color: coral;
+	color: white;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.containerDinks .beerDrink .itemBeerDrink .priceOfBeerDrink span
+{
+	margin-left: 10px;
+}
+.containerDinks .beerDrink h1
+{
+	font-size: 40px;
+	font-weight: bold;
+	width: 100%;
+	border-bottom: 4px solid coral;	
 }
