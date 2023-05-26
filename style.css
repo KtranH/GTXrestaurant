@@ -88,10 +88,6 @@ a
 {
 	transform: scaleX(1);
 }
-.menu ul li:hover
-{
-	font-size: 25px;
-}
 .menu img
 {
 	width: 30px;
@@ -139,13 +135,12 @@ a
 }
 .food3Menu
 {	
-	top: -50px;
+	top: -40px;
 	position: absolute;
 	left: 280px;
 	width: 0;
 	background: white;
 	border-radius: 30px;
-	padding: 30px;
 	transition: all 1s;
 	opacity: 0;
 }
@@ -157,7 +152,6 @@ a
 	width: 0;
 	background: white;
 	border-radius: 30px;
-	padding: 30px;
 	transition: all 1s;
 	opacity: 0;
 }
@@ -629,6 +623,7 @@ a
 	height: 700px;
 	border-radius: 30px;
 	position: relative;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 .foodSlider #ItemSlider .itemSliderFood
 {
@@ -780,6 +775,7 @@ a
 	background-color: coral;
 	border-radius: 30px;
 	margin-left: 250px;
+	cursor: pointer;
 }
 .countDown .itemCount .time .clickRec .mess i
 {
@@ -1441,6 +1437,7 @@ a
 	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 	border-radius: 30px;
 	display: inline-block;
+	overflow: hidden;
 }
 .containerDinks .beerDrink .itemBeerDrink .photoBeerDrink img
 {
@@ -1452,17 +1449,11 @@ a
 .containerDinks .beerDrink .itemBeerDrink .titleBeerDrink
 {
 	font-size: 30px;
-	height: 95px;
 	font-weight: bold;
 	font-family: 'Lobster', cursive;
 	width: 100%;
-}
-.containerDinks .beerDrink .itemBeerDrink .titleBeerDrink span
-{
-	width: 100%;
+	margin: 10px;
 	height: 95px;
-	text-align: center;
-	align-content: center;
 }
 .containerDinks .beerDrink .itemBeerDrink .priceOfBeerDrink
 {
@@ -1483,4 +1474,278 @@ a
 	font-weight: bold;
 	width: 100%;
 	border-bottom: 4px solid coral;	
+}
+.containerDinks .wine
+{
+	width: 100%;
+	margin-top: 50px;
+}
+.containerDinks .wine .itemWine
+{
+	margin-top: 30px;
+	margin-right: 20px;
+	width: 240px;
+	height: 350px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	border-radius: 30px;
+	display: inline-block;
+}
+.containerDinks .wine .itemWine .photoWine img
+{
+	width: 212px;
+	height: 160px;
+	margin-left: 13px;
+	margin-top: 20px;
+}
+.containerDinks .wine .itemWine .titleWine
+{
+	font-size: 25px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	width: 100%;
+	margin: 10px;
+	height: 95px;
+}
+.containerDinks .wine .itemWine .priceOfWine
+{
+	font-weight: bold;
+	font-size: 18px;
+	width: 100%;
+	background-color: coral;
+	color: white;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.containerDinks .wine .itemWine .priceOfWine span
+{
+	margin-left: 10px;
+}
+.containerDinks .wine h1
+{
+	font-size: 40px;
+	font-weight: bold;
+	width: 100%;
+	border-bottom: 4px solid coral;	
+}
+.containerBookTable
+{
+	width: 100%;
+	height: 120vh;
+	position: relative;
+	background: #F5F5F5;
+}
+.containerBookTable .itemBookTable
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 5%;
+	border-radius: 30px;
+	background: white;
+	box-shadow: 0 0 5px rgba(0,0,0,0.25);
+}
+.containerBookTable .itemBookTable form
+{
+	width: 100%;
+	position: relative;
+}
+.containerBookTable .itemBookTable form h1
+{
+	font-size: 50px;
+	width: 100%;
+	text-align: center;
+	border-bottom: 4px solid coral;
+	font-family: 'Lobster', cursive;
+}
+.containerBookTable .itemBookTable form h3
+{
+	margin-top: 10px;
+	text-align: center;
+	width: 100%;
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+.containerBookTable .itemBookTable form .titleBookTableName
+{
+	margin-top: 5%;
+	font-size: 20px;
+}
+.containerBookTable .itemBookTable form #nameID
+{
+	margin-top: 2%;
+	font-size: 15px;
+	width: 100%;
+	outline: none;
+	border: none;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	padding: 2%;
+	border-radius: 30px;
+}
+.containerBookTable .itemBookTable form .titleBookTableEmail
+{
+	margin-top: 5%;
+	font-size: 20px;
+}
+.containerBookTable .itemBookTable form #emailInput
+{
+	margin-top: 2%;
+	font-size: 15px;
+	width: 100%;
+	outline: none;
+	border: none;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	padding: 2%;
+	border-radius: 30px;
+}
+.containerBookTable .itemBookTable form .titleBookTablePhone
+{
+	margin-top: 5%;
+	font-size: 20px;
+}
+.containerBookTable .itemBookTable form #phoneNumberInput
+{
+	margin-top: 2%;
+	font-size: 15px;
+	width: 100%;
+	outline: none;
+	border: none;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	padding: 2%;
+	border-radius: 30px;
+}
+.containerBookTable .itemBookTable form .titleBookTableNumber
+{
+	margin-top: 5%;
+	font-size: 20px;
+}
+.containerBookTable .itemBookTable form #numbers
+{
+	margin-top: 2%;
+	font-size: 15px;
+	width: 100%;
+	outline: none;
+	border: none;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	padding: 2%;
+	border-radius: 30px;
+}
+.containerBookTable .itemBookTable form .titleBookTableLocation
+{
+	margin-top: 5%;
+	font-size: 20px;
+}
+.containerBookTable .itemBookTable form #locations
+{
+	margin-top: 2%;
+	font-size: 15px;
+	width: 105%;
+	outline: none;
+	border: none;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	padding: 2%;
+	border-radius: 30px;
+}
+.containerBookTable .itemBookTable form .titleBookTableDes
+{
+	margin-top: 5%;
+	font-size: 20px;
+}
+.containerBookTable .itemBookTable form #moreDes
+{
+	margin-top: 2%;
+	font-size: 15px;
+	width: 100%;
+	outline: none;
+	border: none;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	padding: 3%;
+	border-radius: 30px;
+}
+.containerBookTable .itemBookTable form .logoBookTable
+{
+	margin-top: -10%;
+	width: 100%;
+	text-align: center;
+}
+.containerBookTable .itemBookTable form .logoBookTable img
+{
+	width: 80px;
+	height: 80px;
+}
+.containerBookTable .itemBookTable form .finishSign
+{
+	outline: none;
+	border: none;
+	padding: 2%;
+	border-radius: 30px;
+	font-size: 18px;
+	position: absolute;
+	bottom: -6%;
+	left: 90%;
+	cursor: pointer;
+	font-weight: bold;
+	color: white;
+	background: coral;
+}
+.containerTableResult
+{
+	width: 100%;
+	height: 80vh;
+	position: relative;
+	background: #F5F5F5;
+}
+.containerTableResult .itemResult
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.containerTableResult .itemResult .resultLogo
+{
+	width: 100%;
+	text-align: center;
+}
+.containerTableResult .itemResult .resultLogo img
+{
+	width: 80px;
+	height: 80px;
+}
+.containerTableResult .itemResult .idResult
+{
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.containerTableResult .itemResult ul li
+{
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.containerTableResult .itemResult ul li .resultName, .resultEmail, .resultPhone
+{
+	font-size: 16px;
+}
+.containerTableResult .itemResult .textResult
+{
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+}
+.containerTableResult .itemResult .titleResult
+{
+	font-size: 50px;
+	width: 100%;
+	text-align: center;
+	border-bottom: 4px solid coral;
+	font-family: 'Lobster', cursive;
+	font-weight: bold;
+}
+.containerTableResult .itemResult .titleResult2
+{
+	margin-top: 10px;
+	font-size: 20px;
+	text-align: center;
+	width: 100%;
+	font-family: 'Montserrat Alternates', sans-serif;
 }
