@@ -1749,3 +1749,57 @@ a
 	width: 100%;
 	font-family: 'Montserrat Alternates', sans-serif;
 }
+.containerLocation
+{
+	width: 100%;
+	height: 2300px;
+}
+.containerLocation .itemLocation
+{
+	margin-top: 100px;
+	width: 70%;
+	height: 2300px;
+	margin: 50px auto;
+}
+.containerLocation .itemLocation::after
+{
+	content: "";
+	display: block;
+}
+.containerLocation .itemLocation .location
+{
+	display: flex;
+	margin-bottom: 50px;
+	justify-content: center;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	border-radius: 30px;
+	background: #F5F5F5;
+}
+.containerLocation .itemLocation .location .imgLocation img
+{
+	width: 512px;
+	height: 360px;
+	margin-right: 20px;
+	object-fit: cover;
+	border-radius: 30px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.containerLocation .itemLocation .location .textLocation
+{
+	width: 800px;
+	height: 300px;
+	padding: 30px;
+	border-radius: 30px;
+}
+.containerLocation .itemLocation .location .textLocation .titleLocation
+{
+	font-size: 45px;
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	border-bottom: 4px solid tomato;
+}
+.containerLocation .itemLocation .location .textLocation 
+{
+	line-height: 1.2;
+	font-size: 20px;
+}
