@@ -174,7 +174,7 @@ a
 }
 .banner img
 {
-	filter: brightness(0.75);
+  filter: brightness(0.75);
   width: 1860px;
   transition: all 1s;
   object-fit: cover;
@@ -1752,7 +1752,7 @@ a
 .containerLocation
 {
 	width: 100%;
-	height: 2300px;
+	height: 2500px;
 }
 .containerLocation .itemLocation
 {
@@ -1802,4 +1802,144 @@ a
 {
 	line-height: 1.2;
 	font-size: 20px;
+}
+.containerBannerChef 
+{
+	width: 100%;
+	height: 800px;
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.75)),url(./img/190710135245-12-waterfront-restaurants.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.containerBannerChef .itemBannerChef
+{
+	width: 70%;
+	height: 800px;
+	margin: 50px auto;
+	display: flex;
+	justify-content: center;
+}
+.containerBannerChef .itemBannerChef .textBannerChef
+{
+	color: white;
+	width: 800px;
+	height: 800px;
+	position: relative;
+}
+.containerBannerChef .itemBannerChef .textBannerChef h1
+{
+	position: absolute;
+	top: 30%;
+	font-size: 60px;
+	font-family: 'Lobster', cursive;
+	opacity: 0;
+	animation: effectMain 1s ease-in-out 1 forwards
+}
+.containerBannerChef .itemBannerChef .textBannerChef p
+{
+	position: absolute;
+	top: 42%;
+	font-size: 18px;
+	opacity: 0;
+	animation: effectMain 1s ease-in-out 0.3s 1 forwards
+}
+.containerBannerChef .itemBannerChef .photoBannerChef img
+{
+	height: 300px;
+	height: 800px;
+	filter: brightness(0.9);
+	opacity: 0;
+	animation: effectMain 1s ease-in-out 0.6s 1 forwards
+}
+.containerListChef
+{
+	width: 100%;
+	height: 1200px;
+}
+.containerListChef .listChef
+{
+	width: 70%;
+	height: 1200px;
+	margin: 50px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.containerListChef .listChef .chefPerson img
+{
+	width: 300px;
+	height: 300px;
+	border-radius: 30px;
+}
+.containerListChef .listChef .chefPerson
+{
+	width: 300px;
+	height: 550px;
+	border-radius: 30px;
+	background: #F5F5F5;
+	margin-right: 20px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.containerListChef .listChef .chefPerson .textChef
+{
+	padding: 10px;
+	width: 280px;
+	height: 200px;
+	font-size: 18px;
+	margin: 0 auto;
+}
+.containerListChef .listChef .chefPerson .textChef .desChef
+{
+	line-height: 1.5;
+}
+.containerListChef .listChef .chefPerson .textChef .nameChef
+{
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	margin-bottom: 10px;
+	width: 100%;
+	background: coral;
+	color: white;
+	border-radius: 30px;
+}
+.containerInformation
+{
+	width: 70%;
+	height: 1200px;
+	margin: 0 auto;
+}
+.containerInformation .listItemInformation
+{
+	width: 100%;
+	height: 1200px;
+}
+.containerInformation .listItemInformation .itemInformation
+{
+	width: 400px;
+	text-align: center;
+	margin: 0 auto;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	padding: 2%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 30px;
+	background: #F5F5F5;
+	animation: effectMain 2s ease-in-out 1 forwards;
+}
+.containerInformation .listItemInformation .itemInformation .titleInformation
+{
+	font-size: 40px;
+	font-weight: bold;
+	font-family: 'Lobster', cursive;
+	margin-top: 20px;
+	border-bottom: 4px solid coral;
+}
+.containerInformation .listItemInformation .itemInformation .desInformation
+{
+	border-bottom: 4px solid coral;
+	font-size: 20px;
+	width: 400px;
 }
