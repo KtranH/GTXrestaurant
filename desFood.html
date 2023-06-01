@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<link rel="shortcut icon" type="image/x-icon" href="img/cutlery.png">
-<title>GTX | Thành công</title>
+<title>GTX | Súp hành tây Pháp</title>
 </head>
 <body>
 	<div class="header">
@@ -20,7 +20,7 @@
 	<div class="menu">
 		<ul>
 			<li><a href="index.html"><img src="img/home.png" alt="home">Trang Chủ</a></li>	
-			<li class="foodMenu"><a href="#"><img src="img/restaurant.png" alt="food">Món ăn<i class="fa-solid fa-chevron-down"></i></a>
+			<li class="foodMenu"><a href="#" style="color: red"><img src="img/restaurant.png" alt="food">Món ăn<i class="fa-solid fa-chevron-down"></i></a>
 			<ul class="food2Menu">
 				<li class="food2Menu1"><i class="fa-solid fa-carrot"></i><a href="#">Khai vị</a>
 					<ul class="food3Menu">
@@ -39,48 +39,42 @@
 				<li><i class="fa-solid fa-wine-glass"></i><a href="drinks.html">Nước uống</a></li>
 			</ul>
 			</li>
-			<li><a href="table.html" style="color: red"><img src="./img/edit-table.png" alt="table">Đặt bàn</a></li>
+			<li><a href="table.html"><img src="./img/edit-table.png" alt="table">Đặt bàn</a></li>
 			<li><a href="location.html"><img src="img/location.png" alt="location">Vị Trí</a></li>
 			<li><a href="chef.html"><img src="img/chef.png" alt="chef">Đầu bếp</a></li>	
 			<li><a href="more.html"><img src="img/information.png" alt="more">Thông tin</a></li>
 		</ul>
 		</div>
 	</div>
-	<div class="containerTableResult">
-	<div class="itemResult">
-	<div class="resultLogo">
-	<img src="img/cutlery.png" alt="logo">
+	<div class="containerDesFood">
+		<div class="itemDesFood">
+		<div class="backGroundDes">
+			<img src="food/khaiVi/soup/29souprex-french-wpfh-threeByTwoMediumAt2X.jpg" alt="">
+			<div class="textDesFood">
+			<div class="titleDesFood">
+			Súp Hành Tây Pháp
+			</div>
+			<div class="contentDesFood">
+			Súp Hành Tây Pháp, hay còn được gọi là "Soupe à l'Oignon" trong tiếng Pháp, là một món súp truyền thống của nước Pháp. Đây là một món ăn phổ biến và có nguồn gốc từ vùng đất Paris. Súp Hành Tây Pháp thường được coi là một món ăn truyền thống của quốc gia này.
+			<br>
+			<br>
+			Thành phần chính của Súp Hành Tây Pháp bao gồm:
+			<br>
+			Hành tây: là thành phần chính và quan trọng nhất của món ăn này. Hành tây thường được cắt mỏng và phi cho đến khi trở nên mềm và vàng.<br>
+			Bột mì: được sử dụng để làm nền nếp cho súp và tạo độ sánh.<br>
+			Nước thịt: thường là nước thịt bò hoặc nước thịt gia cầm để tạo nền hương vị cho súp.<br>
+			Phô mai Gruyère hoặc phô mai Emmental: phô mai được rắc lên mặt súp và được nướng cho đến khi phô mai tan chảy và vàng ươm.<br>
+			Bánh mì: thường là bánh mì baguette được cắt thành lát và nướng giòn. Bánh mì được đặt lên mặt súp và phô mai trước khi được nướng.<br>
+			<br>
+			Súp Hành Tây Pháp là một món ăn đặc biệt với hương vị thơm ngon, đậm đà và phong phú. Nó thường được thưởng thức vào mùa đông hoặc trong các dịp lễ cuối năm tại Pháp. Món ăn này đã trở thành một biểu tượng của ẩm thực Pháp và được ưa chuộng trên toàn thế giới.
+			<br>
+			<br>
+			<p style ="font-weight: bold;">Giá tại bàn: 150.000VNĐ (chưa bao gồm phí phục vụ và thuế VAT)</p>
+			</div>
+			</div>
+		</div>
 	</div>
-	<div class="titleResult">
-	Xin chúc mừng<br>Bạn đã đặt bàn thành công!
 	</div>
-	<div class="titleResult2">
-	Rất mong sớm gặp bạn tại nhà hàng
-	</div>
-	<div class="idResult"></div>
-	<ul>
-		<li><div class="resultName"></div></li>
-		<li><div class="resultPhone"></div></li>
-		<li><div class="resultEmail"></div></li>
-	</ul>
-	<div class="textResult">Chúng tôi xin gửi lời cảm ơn chân thành tới quý khách hàng vì đã lựa chọn nhà hàng của chúng tôi để tận hưởng bữa tối. GTX RESTAURANT hy vọng rằng quý khách sẽ có một buổi tối thú vị và đáng nhớ tại nhà hàng. Xin chân thành cảm ơn và mong được đón tiếp quý khách một lần nữa.</div>
-	</div>
-	</div>
-	<script>
-	var queryString = window.location.search;
-	var searchResult = new URLSearchParams(queryString);
-	var name = searchResult.get("nameID");
-	var phoneNumber = searchResult.get("phoneNumberInput");
-	var email = searchResult.get("emailInput");
-	var IDBook = document.querySelector(".idResult");
-	var nameCustomer = document.querySelector(".resultName");
-	var emailCustomer = document.querySelector(".resultEmail");
-	var phoneCustomer = document.querySelector(".resultPhone");
-	IDBook.textContent = "Mã đặt bàn của bạn là: " + "#" + phoneNumber;
-	nameCustomer.textContent = "Tên khách hàng: " + name;
-	emailCustomer.textContent = "Email khách hàng: " + email;
-	phoneCustomer.textContent = "Số điện thoại: " + phoneNumber;
-	</script>
 	<div class="footer">
 	<div class="leftFooter">
 		<ul>
